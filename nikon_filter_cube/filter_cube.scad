@@ -3,10 +3,6 @@
 //
 // Hazen 12/14
 //
-// To Fix:
-//   1. SM1 thread is not right, diameter is too small.
-//   2. tab to keep dichroic from sliding out.
-//
 
 $fn = 100;
 
