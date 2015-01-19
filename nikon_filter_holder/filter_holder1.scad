@@ -73,11 +73,11 @@ module main(){
 
 		// insert clearance
 		translate([0,0,1.5])
-		cylinder(r = 14.3, h = 9);
+		cylinder(r = 14.9, h = 9);
 
 		for(i=[0:3]){
 			rotate([0,0,90*i])
-			translate([14,0,-0.1])
+			translate([14.3,0,-0.1])
 			cylinder(r = 1.1, h = 10);
 		}
 
@@ -108,31 +108,33 @@ module holder(){
 	height = 2;
 	difference(){
 		union(){
-			cylinder(r = 14, h = height);
+			cylinder(r = 14.6, h = height);
 	
 			for(i=[0:3]){
 				rotate([0,0,90*i])
-				translate([14.2,0,0]){
+				translate([14.6,0,0]){
+					translate([0,0,-1])
 					cylinder(r = 1, h = 4 + height);
 
-					translate([0,0,4 + height])
+					translate([0,0,3 + height])
 					hull(){
+						translate([0,-1,0])
 						cylinder(r = 1, h = 1);
-						translate([1,0,0])
+						translate([0,1,0])
 						cylinder(r = 1, h = 1);	
 					}
 	
 					translate([0,0,height])
 					hull(){
 						cylinder(r = 1, h = 1);
-						translate([-1.75,0,0])
+						translate([-2.6,0,0])
 						cylinder(r = 1, h = 1);	
 					}
 				}
 			}
 		}
 		translate([0,0,-0.01])
-		cylinder(r = 13.2, h = (height+0.02));
+		cylinder(r = 12.6, h = (height+0.02));
 	}
 }
 
@@ -140,12 +142,13 @@ if (testing){
 	difference(){
 		union(){
 			main();
-			translate([0,0,0])
+			translate([0,0,2])
 			holder();
 		}
 
 		translate([-30,0,-1])
 		cube(size = [60,100,20]);
+
 	}
 }
 else{
