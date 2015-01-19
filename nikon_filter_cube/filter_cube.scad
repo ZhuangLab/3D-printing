@@ -6,8 +6,8 @@
 
 $fn = 100;
 
-show_thread = 1;
-testing = 0;
+show_thread = 0;
+testing = 1;
 
 // reverse trapezoid
 module reverse_trapezoid(p0, p1, p2, p3, p4, p5, p6, p7)
@@ -448,6 +448,42 @@ module emission_filter_holder()
 	}
 }
 
+module dichroic_tab(){
+
+	translate([17.4,11.4,33.7]){
+		hull(){
+			translate([-2.0,0,0])
+			rotate([-90,0,0])
+			cylinder(r =0.5, h = 1);
+
+			translate([2.0,0,0])
+			rotate([-90,0,0])
+			cylinder(r =0.5, h = 1);
+		}
+	}
+
+	translate([0,11.9,0])
+	hull(){
+		translate([22.65,0,16.25])
+		rotate([-90,0,0])
+		cylinder(r =0.25, h = 1.5);
+
+		translate([20.65,0,34.15])
+		rotate([-90,0,0])
+		cylinder(r =0.25, h = 1.5);
+
+		translate([14.15,0,34.15])
+		rotate([-90,0,0])
+		cylinder(r =0.25, h = 1.5);
+
+		translate([9.15,0,29.15])
+		rotate([-90,0,0])
+		cylinder(r =0.25, h = 1.5);
+
+	}
+
+}
+
 module dichroic_holder() {
 	difference(){
 		union(){
@@ -469,21 +505,16 @@ module dichroic_holder() {
 
 			// match slots in base.
 			translate([16.9,13,21])
-			cube(size = [1.0,1.1,6]);
+			cube(size = [1.0,1.1,10]);
 
 			mirror([0,1,0])
 			translate([16.9,13,21])
-			cube(size = [1.0,1.1,6]);
+			cube(size = [1.0,1.1,10]);
 
 			// side panels
-			translate([7.33,11.9,30.67])
-			rotate([0,45,0])
-			cube(size = [20,1.5,6]);
-
+			dichroic_tab();
 			mirror([0,1,0])
-			translate([7.33,11.9,30.67])
-			rotate([0,45,0])
-			cube(size = [20,1.5,6]);
+			dichroic_tab();
 
 			// pressure points at corners
 			translate([17.4,0,20.6])
@@ -516,28 +547,6 @@ module dichroic_holder() {
 			translate([15,-10.9,-1.5])
 			cylinder(r=0.5,h=3);
 		}
-
-		// grooves in side panels
-		hull(){
-			translate([11.57,11.3,31.37])
-			rotate([-90,0,0])
-			cylinder(r = 1, h = 1.1);
-
-			translate([22.17,11.3,20.77])
-			rotate([-90,0,0])
-			cylinder(r = 1, h = 1.1);
-		}
-
-		mirror([0,1,0])
-		hull(){
-			translate([11.57,11.3,31.37])
-			rotate([-90,0,0])
-			cylinder(r = 1, h = 1.1);
-
-			translate([22.17,11.3,20.77])
-			rotate([-90,0,0])
-			cylinder(r = 1, h = 1.1);
-		}
 	}
 }
 
@@ -549,9 +558,10 @@ if (testing){
 		union(){
 			base();
 
-			translate([0,0,0.5])
-			emission_filter_holder();
+			//translate([0,0,0.5])
+			//emission_filter_holder();
 
+			translate([0,0,1])
 			dichroic_holder();
 		}
 
