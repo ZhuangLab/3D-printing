@@ -6,7 +6,7 @@ Notes:
 * You will need an SM1 threaded ring to hold an excitation filter.
 * It costs about $50 to have [Shapeways](http://www.shapeways.com/) print this for you in their [Frosted Ultra Detail](http://www.shapeways.com/materials/frosted-detail-plastic?li=nav) material.
 * The part from Shapeways will need to be cleaned by sonication in Ethanol to remove residual oils.
-* The variance in the part size from Shapeways is higher than their accuracy number would suggest. The width of the cube at the bottom is supposed to be 38mm. The actual dimensions for the 3 we have printed so far are 37.7mm, 37.7mm and 38.1mm. At 38.1mm the fit is really tight.
+* The variance in the part size from Shapeways is higher than their accuracy number would suggest. The width of the cube at the bottom is supposed to be 38mm. The actual dimensions for the 3 we have printed so far are 37.7mm, 37.6mm and 38.1mm. At 38.1mm the fit is really tight.
 
 OpenSCAD Rendering:
 
