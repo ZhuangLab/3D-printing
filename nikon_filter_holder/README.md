@@ -8,6 +8,6 @@ OpenSCAD Rendering:
 
 ![Image of filter holder](filter_holder1_openscad.png)
 
-Picture (Shapeways Strong and Flexible, Black):
+Picture (Shapeways Strong and Flexible, White, unpolished):
 
 ![Image of filter holder](filter_holder1.png)

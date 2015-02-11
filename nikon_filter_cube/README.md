@@ -1,5 +1,5 @@
 
-Filter cube for a Nikon TiU microscope, fits both Olympus and Nikon style dichroics. Works ok, but further optimization is ongoing.
+Filter cube for a Nikon TiU microscope, fits both Olympus and Nikon style dichroics. Works, but the fit into the filter wheel is sometimes a bit tight.
 
 Notes:
 * The tolerances on this part are quite high (~ 0.1mm), particularly for the SM1 thread for the excitation filter. You will need a high quality 3D printer to make this.
@@ -15,4 +15,3 @@ OpenSCAD Rendering:
 Pictures: (Shapeways Frosted Ultra Detail):
 
 ![Image of filter cube B](filter_cube_pic1.png)
-![Image of filter cube B](filter_cube_pic2.png)
