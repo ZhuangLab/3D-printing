@@ -558,10 +558,10 @@ if (testing){
 		union(){
 			base();
 
-			//translate([0,0,0.5])
-			//emission_filter_holder();
+			translate([-20,0,0.5])
+			emission_filter_holder();
 
-			translate([0,0,1])
+			translate([0,0,15])
 			dichroic_holder();
 		}
 

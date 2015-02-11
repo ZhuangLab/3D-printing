@@ -7,7 +7,7 @@
 
 $fn = 100;
 
-testing = 0;
+testing = 1;
 
 module cutout()
 {
@@ -142,12 +142,12 @@ if (testing){
 	difference(){
 		union(){
 			main();
-			translate([0,0,2])
+			translate([0,0,5])
 			holder();
 		}
 
-		translate([-30,0,-1])
-		cube(size = [60,100,20]);
+		//translate([-30,0,-1])
+		//cube(size = [60,100,20]);
 
 	}
 }
