@@ -6,8 +6,8 @@
 
 $fn = 100;
 
-show_thread = 0;
-testing = 1;
+show_thread = 1;
+testing = 0;
 
 // reverse trapezoid
 module reverse_trapezoid(p0, p1, p2, p3, p4, p5, p6, p7)
@@ -114,10 +114,10 @@ module base()
 			difference(){
 				union(){
 					translate([0,-19,0])
-					cube(size = [37,38,8.5]);
+					cube(size = [37,38,8.45]);
 				
-					translate([0,-15,8.5])
-					cube(size = [37,30.0,27.5]);
+					translate([0,-15,8.45])
+					cube(size = [37,30.0,27.55]);
 				}
 
 				// optical clearance for dichroic.
@@ -195,12 +195,12 @@ module base()
 				//
 				// side flanges
 				//
-				translate([-0.5,19,2])
+				translate([-0.5,19,1.95])
 				rotate([31.61,0,0])
 				cube(size = [42.5,5,7.632]);
 
 				mirror([0,1,0])
-				translate([-0.5,19,2])
+				translate([-0.5,19,1.95])
 				rotate([31.61,0,0])
 				cube(size = [42.5,5,7.632]);		
 
