@@ -2,7 +2,7 @@
 A rack that holds 5 Thorlabs CFH2-F removable filter holders.
 
 Notes:
-* It costs about $25 to have [Shapeways](http://http://www.shapeways.com/) print this for you in their *Strong and Flexible Plastic* material.
+* It costs about $22 to have [Shapeways](http://http://www.shapeways.com/) print this for you in their *Strong and Flexible Plastic Polished* material.
 
 OpenSCAD Rendering:
 
