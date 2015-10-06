@@ -204,6 +204,11 @@ module bottom()
 			translate([38,-1.25,3])
 			cube(size=[2.5,2.5,13]);
 		}
+		
+		rotate([0,0,310])
+		translate([38,-1.25,3])
+		cube(size=[2.5,2.5,13]);
+
 	}
 
 	// knurls
@@ -262,6 +267,11 @@ module top()
 				translate([37.25,-1,0])
 				cube(size=[3,2,height]);
 			}	
+
+			rotate([0,0,310])
+			translate([37.25,-1,0])
+			cube(size=[3,2,height]);
+
 		}
 
 		// center hole.
@@ -284,12 +294,12 @@ if (testing){
 		union(){
 			bottom();
 
-			//translate([0,0,3.7])
-			translate([0,0,20])
+			translate([0,0,3.7])
+			//translate([0,0,20])
 			top();
 
-			//translate([0,0,4.3])
-			translate([0,0,40])
+			translate([0,0,4.3])
+			//translate([0,0,40])
 			clamp();
 	
 			if(show_wafer){
@@ -307,7 +317,7 @@ if (testing){
 			cube(size = [100,49.9,20]);
 		}
 
-		if(0){
+		if(1){
 			translate([-50,-50,-1])
 			cube(size = [100,100,7]);
 
