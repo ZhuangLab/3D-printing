@@ -7,7 +7,7 @@
 $fn = 200;
 
 show_wafer = 0;
-testing = 1;
+testing = 0;
 
 module wafer()
 {
@@ -237,7 +237,7 @@ module clamp()
 
 		// center hole.
 		translate([0,0,-0.1])
-		cylinder(r = 33, h = height + 1.2);
+		cylinder(r = 35, h = height + 1.2);
 
 	}
 
@@ -260,6 +260,7 @@ module top()
 	difference(){
 		union(){
 			cylinder(r = 38.5, h = height);
+			cylinder(r = 34.5, h = height + 3);
 
 			// alignment tabs.
 			for (i = [0:10]){
@@ -276,7 +277,7 @@ module top()
 
 		// center hole.
 		translate([0,0,-0.1])
-		cylinder(r = 33, h = height + 0.2);
+		cylinder(r = 33, h = height + 3.2);
 
 		// groove for o-ring.
 		translate([0,0,-0.5])
@@ -317,12 +318,13 @@ if (testing){
 			cube(size = [100,49.9,20]);
 		}
 
-		if(1){
-			translate([-50,-50,-1])
-			cube(size = [100,100,7]);
+		if(0){
+			offset = 4;
+			translate([-50,-50,-14 + offset])
+			cube(size = [100,100,20]);
 
-			translate([-50,-50,6.1])
-			cube(size = [100,100,15]);
+			translate([-50,-50,6.1 + offset])
+			cube(size = [100,100,20]);
 		}
 
 	}
@@ -330,7 +332,7 @@ if (testing){
 else{
 	bottom();
 
-	translate([48,74,6])
+	translate([48,74,9])
 	rotate([180,0,0])
 	top();
 
