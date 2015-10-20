@@ -9,6 +9,6 @@ OpenSCAD Rendering:
 
 ![Image of PDMS caster](pdms_caster_openscad.png)
 
-Picture (Shapeways Strong and Flexible, White, polished):
+Picture (Shapeways Strong and Flexible, White):
 
 ![Image of PDMS caster](pdms_caster.png)
