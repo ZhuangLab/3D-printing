@@ -8,7 +8,7 @@ Notes:
 * It costs about $140 to make 5x of al_plates in Al 6061, 0.125" thick, normal taper, basic finish at [Big Blue Saw](https://www.bigbluesaw.com/).
 * It costs about $120 to make 5x of ss_plate in SS T-304, 0.018" thick, normal taper, basic finish at [Big Blue Saw](https://www.bigbluesaw.com/).
 
-The part drawings were created using SolveSpace.
+The part drawings were created using [SolveSpace](http://solvespace.com/index.pl).
 
 Picture:
 
